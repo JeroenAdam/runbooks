@@ -1,1 +1,1 @@
-# Welcome to PowerShell repository
+# PowerShell repository
