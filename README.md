@@ -11,8 +11,8 @@ del .\clean.txt
 del .\result.txt
 ```
 
-//clean by ignoring lines that start with #
+//clean by removing empty lines and lines that start with #
 ```
-gc .\clean.txt | select-string -pattern '^#' -notmatch | Out-File .\result.txt
+gc .\toclean.txt | where {$_ -ne ""} | select-string -pattern '^#' -notmatch | Out-File .\result.txt
 ```
 To add: AD queries, CSV parsing, Excel COM interface
