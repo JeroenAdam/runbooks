@@ -10,4 +10,9 @@ del .\combine.txt
 del .\clean.txt 
 del .\result.txt
 ```
+
+//clean by ignoring lines that start with #
+```
+gc .\clean.txt | select-string -pattern '^#' -notmatch | Out-File .\result.txt
+```
 To add: AD queries, CSV parsing, Excel COM interface
